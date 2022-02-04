@@ -1,0 +1,67 @@
+{
+   "_default":{
+      "1":{
+         "type":"Feature",
+         "id":"cfbd4793-4225-4743-942b-d9b97acfbfcc",
+         "properties":{
+            "Title":"swissTLMRegio Landcover",
+            "Abstract":"Le Topic Landcover décrit la couverture du sol. Il est composé d'une feature class. Les surfaces forment un réseau de surface dans lequel des vides et des superpositions particulières sont autorisées.",
+            "Subjects":[
+                "bois,",
+                "système d'information géographique,",
+                "végétation,",
+                "établissement humain,",
+                "lac,",
+                "roche,",
+                "Occupation des terres,",
+                "surface primaire,",
+                "modèle du territoire,",
+                "SIG (Système d'Information Géographique),",
+                "opendata.swiss,",
+                "IFDG l’Infrastructure Fédérale de données géographiques,",
+                "imageryBaseMapsEarthCover"
+            ],
+            "Creator": "None",
+            "Contributor": "None",
+            "Publisher": "None",
+            "Modified": "2021-10-15",
+            "Language": "fr-CH",
+            "Format":"ESRI Personal Geodatabase",
+            "Rights":"",
+            "Bounding Box": "45.540855,10.742442,47.972781,5.606558",
+            "_metadata-anytext":"",
+            "Links":[
+                "https://map.geo.admin.ch/?layers=ch.swisstopo.vec200-landcover",
+                "https://www.swisstopo.admin.ch/de/geodata/landscape/tlmregio.html",
+                "https://wms.geo.admin.ch/?SERVICE=WMS&VERSION=1.0.0&REQUEST=GetCapabilities",
+                "https://www.swisstopo.admin.ch/de/geodata/landscape/tlmregio.html",
+                "http://map.geo.admin.ch/?Y=660000.00&X=190000.00&zoom=1&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.swisstopo.vec200-landcover&layers_opacity=0.75&time_current=latest&lang=de&topic=ech",
+                "https://opendata.swiss/perma/cfbd4793-4225-4743-942b-d9b97acfbfcc@bundesamt-fur-landestopografie-swisstopo"
+            ]
+         },
+         "geometry":{
+            "type":"Polygon",
+            "coordinates":[
+               [
+                  [
+                    5.990886927539317,
+                    45.830734134099295
+                  ],
+                  [
+                    10.48778698292148,
+                    45.830734134099295
+                  ],
+                  [
+                    10.48778698292148,
+                    47.777794511993534
+                  ],
+                  [
+                    5.990886927539317,
+                    47.777794511993534
+                  ]
+               ]
+            ]
+         }
+      }
+   }
+}
