@@ -6,6 +6,7 @@ services:
     volumes:
       - ./my.config.yml:/pygeoapi/local.config.yml
       - ./data:/pygeoapi/tests/data
+      - ./templates/collections/items/index.html:/pygeoapi/templates/collections/items/index.html
     ports:
       - "5000:80"
 
