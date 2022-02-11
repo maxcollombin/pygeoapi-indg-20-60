@@ -6,13 +6,13 @@ services:
     volumes:
     # resource configuration
       - ./my.config.yml:/pygeoapi/local.config.yml 
+    # templates
+      - ./templates/_base.html:/pygeoapi/pygeoapi/templates/_base.html
     # data
       - ./data:/pygeoapi/tests/data
     # process
       - ./process/base.py:/pygeoapi/pygeoapi/process/base.py
       - ./process/hello_world.py:/pygeoapi/pygeoapi/process/hello_world.py
-    # templates
-      - ./templates/_base.html:/pygeoapi/pygeoapi/templates/_base.html 
     ports:
       - "5000:80"
 
