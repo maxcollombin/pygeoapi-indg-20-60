@@ -26,7 +26,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 # =================================================================
-# Server connection settings
+# Server-wide settings
 server:
     bind:
         host: 0.0.0.0
@@ -54,11 +54,11 @@ server:
         name: TinyDB
         connection: /tmp/pygeoapi-test-process-manager.db
         output_dir: /tmp
-# Logging        
+# Logging configuration
 logging:
     level: ERROR
     #logfile: /tmp/pygeoapi.log
-# Metadata
+# Server-wide metadata (contact, licensing, etc.)
 metadata:
     identification:
         title:
@@ -100,7 +100,7 @@ metadata:
         hours: Hours of Service
         instructions: During hours of service.  Off on weekends.
         role: pointOfContact
-# Ressources:
+# Dataset collections, processes and stac-collections offered by the server:
 resources:
     # Records # 1: swissTLMRegio Landcover (TinyDB provider)
     # Ref: https://github.com/Geonovum/testbed-spatial-APIs
@@ -317,6 +317,50 @@ resources:
                       CPL_DEBUG: NO
               id_field: t_id
               layer: ms:nutzungsflaechen
+    #Collection # 5: hotosm_bdi_waterways (PostgreSQL provider)
+    # Ref: https://raw.githubusercontent.com/geopython/demo.pygeoapi.io/master/services/pygeoapi_stable/local.config.yml
+    #      https://github.com/geopython/pygeoapi/blob/master/pygeoapi/provider/postgresql.py
+    # error:
+    # psql: error: could not connect to server: Connection refused
+    #     Is the server running on host "127.0.0.1" and accepting
+    #     TCP/IP connections on port 5432?
+    # ffp_foret_protectrice_ge:
+    #    type: collection
+    #    title: Waterways of Burundi
+    #    description: Waterways of Burundi, Africa. Dataset timestamp  1st Sep 2018 - Humanitarian OpenStreetMap Team (HOT)
+    #    keywords:
+    #        - Burundi
+    #        - Waterways
+    #        - Africa
+    #        - OSM
+    #        - HOT
+    #    crs:
+    #        - CRS84
+    #    links:
+    #        - type: text/html
+    #          rel: canonical
+    #          title: information
+    #          href: https://data.humdata.org/dataset/hotosm_bdi_waterways
+    #          hreflang: en-US
+    #    extents:
+    #        spatial:
+    #            bbox: [5.96,45.82,10.49,47.81] #[28.9845376683957, -4.48174334765485, 30.866396969019, -2.3096796]
+    #            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    #        temporal:
+    #            begin:
+    #            end: null # or empty
+    #    providers:
+    #        - type: feature
+    #          name: PostgreSQL
+    #          data:
+    #              host: 127.0.0.1
+    #              dbname: swiss_mgdm #test
+    #              user: postgres
+    #              password: postgres
+    #              port: 5432
+    #             #  schema: public
+    #          id_field: id #osm_id
+    #          table: ffp_foret_protectrice_ge #hotosm_bdi_waterways
     # Process # 1
     hello-world:
         type: process
